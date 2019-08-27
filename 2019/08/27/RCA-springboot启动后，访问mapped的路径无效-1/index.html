@@ -79,13 +79,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="乘风破浪">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RCA:springboot启动后，访问mapped的路径无效">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/index.html">
 <meta property="og:site_name" content="乘风破浪">
+<meta property="og:description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/6.png">
+<meta property="og:updated_time" content="2019-08-27T09:37:20.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乘风破浪">
+<meta name="twitter:title" content="RCA:springboot启动后，访问mapped的路径无效">
+<meta name="twitter:description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
 
 
 
@@ -115,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/">
 
 
 
 
 
-  <title>乘风破浪</title>
+  <title>RCA:springboot启动后，访问mapped的路径无效 | 乘风破浪</title>
   
 
 
@@ -140,8 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +235,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -256,9 +267,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/" itemprop="url">RCA:springboot启动后，访问mapped的路径无效</a></h1>
+          <h1 class="post-title" itemprop="name headline">RCA:springboot启动后，访问mapped的路径无效</h1>
         
 
         <div class="post-meta">
@@ -330,9 +339,7 @@
       
 
       
-        
-          
-            <h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了<a href="blob:http://editor.swagger.io/ced858c5-818f-4321-8978-2458e151151a" target="_blank" rel="noopener">swagger-spring</a> demo。</p>
+        <h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了<a href="blob:http://editor.swagger.io/ced858c5-818f-4321-8978-2458e151151a" target="_blank" rel="noopener">swagger-spring</a> demo。</p>
 <h1 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h1><p>启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。</p>
 <h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>容器的上下文路径被改变，在application.properties 看到server.contextPath=/v2。默认是/，所以在平常我们直接访问被映射的路径即可访问成功。完整的访问路径应该是shema:host://context-path/mapping</p>
 <h1 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h1><p>首先可以确定tcp连接没有问题，因为返回了404。然后进入dispatchServlet的doDispatch打断点调试，发现并没有进入。则可判断已映射的路径无效是因为没有进入dispatchServlet。接着选择任意一个被加载的filter打断点，发现也没有进入。则可判断请求未进入spring容器，问题很可能发生在tomcat上。</p>
@@ -362,8 +369,6 @@
 <h1 id="经验教训"><a href="#经验教训" class="headerlink" title="经验教训"></a>经验教训</h1><p>遇到成熟的开源框架，发生错误时，应该先看配置。可能比调试通一个项目更快找到原因</p>
 <h1 id="RCA类型"><a href="#RCA类型" class="headerlink" title="RCA类型"></a>RCA类型</h1><p>springboot容器部分不熟悉</p>
 
-          
-        
       
     </div>
     
@@ -380,12 +385,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -395,10 +400,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -406,6 +412,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -426,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景知识"><span class="nav-number">1.</span> <span class="nav-text">背景知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题现象"><span class="nav-number">2.</span> <span class="nav-text">问题现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题原因"><span class="nav-number">3.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排查过程"><span class="nav-number">4.</span> <span class="nav-text">排查过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">5.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经验教训"><span class="nav-number">6.</span> <span class="nav-text">经验教训</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RCA类型"><span class="nav-number">7.</span> <span class="nav-text">RCA类型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -618,6 +653,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

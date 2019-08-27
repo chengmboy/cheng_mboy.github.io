@@ -80,12 +80,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="乘风破浪">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:title" content="分类">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="乘风破浪">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-27T09:46:08.718Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乘风破浪">
+<meta name="twitter:title" content="分类">
 
 
 
@@ -115,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/categories/">
 
 
 
 
 
-  <title>乘风破浪</title>
+  <title>分类 | 乘风破浪</title>
   
 
 
@@ -140,8 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,181 +224,44 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="乘风破浪">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="乘风破浪">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/" itemprop="url">RCA:springboot启动后，访问mapped的路径无效</a></h1>
-        
+	<h1 class="post-title" itemprop="name headline">分类</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T15:52:44+08:00">
-                2019-08-27
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RCA/" itemprop="url" rel="index">
-                    <span itemprop="name">RCA</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
+      <div class="post-body">
         
-          
-            <h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了<a href="blob:http://editor.swagger.io/ced858c5-818f-4321-8978-2458e151151a" target="_blank" rel="noopener">swagger-spring</a> demo。</p>
-<h1 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h1><p>启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。</p>
-<h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>容器的上下文路径被改变，在application.properties 看到server.contextPath=/v2。默认是/，所以在平常我们直接访问被映射的路径即可访问成功。完整的访问路径应该是shema:host://context-path/mapping</p>
-<h1 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h1><p>首先可以确定tcp连接没有问题，因为返回了404。然后进入dispatchServlet的doDispatch打断点调试，发现并没有进入。则可判断已映射的路径无效是因为没有进入dispatchServlet。接着选择任意一个被加载的filter打断点，发现也没有进入。则可判断请求未进入spring容器，问题很可能发生在tomcat上。</p>
-<p>首先在NioEndpoint doRun方法上打断点，发现请求进入，接着找到请求执行的地方。</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
-
-<p>紧接着在往下调试AbstractProtocol</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/2.png">
-
-<p>AbstractProcessorLight</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/3.png">
-
-<p>Http11Processor</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/4.png">
-
-<p>CoyoteAdpter 这里发现postParseSuccess为false，请求没有交给容器，与我们之前的猜想一致。进入postParseRequest方法查看</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/7.png">
-
-<p>CoyoteAdapter 关键点可能在这里，有个mapper</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/5.png">
-
-<p>调试并查看mapper的值，只看到个/v2，于是在访问路径上加上v2，访问localhost:8080/v2，果然成功了。</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/6.png">
-
-<p>最后查看application.properties发现比平常项目多了个server.contextPath=/v2，至此，一切都一目了然了。</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>访问路径加上/v2</p>
-<h1 id="经验教训"><a href="#经验教训" class="headerlink" title="经验教训"></a>经验教训</h1><p>遇到成熟的开源框架，发生错误时，应该先看配置。可能比调试通一个项目更快找到原因</p>
-<h1 id="RCA类型"><a href="#RCA类型" class="headerlink" title="RCA类型"></a>RCA类型</h1><p>springboot容器部分不熟悉</p>
-
-          
         
+          <div class="category-all-page">
+            <div class="category-all-title">
+                目前共计 1 个分类
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/RCA/">RCA</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </div>
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -406,6 +269,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -618,6 +485,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
