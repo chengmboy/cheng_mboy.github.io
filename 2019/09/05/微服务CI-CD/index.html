@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="微服务 CI CD,">
 
 
 
@@ -79,25 +79,20 @@
 
 
 
-<meta name="description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
+<meta name="description" content="什么是 CI/CD？CI/CD 是一种通过在应用开发阶段引入自动化)来频繁向客户交付应用的方法。CI/CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI/CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。 具体而言，CI/CD 在整个应用生命周期内（从集成和测试阶段，到交付和部署）引入了持续自动化和持续监控。这些关联的事务通常被统称为“CI/C">
+<meta name="keywords" content="微服务 CI CD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RCA:springboot启动后，访问mapped的路径无效">
-<meta property="og:url" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/index.html">
+<meta property="og:title" content="微服务CI&#x2F;CD">
+<meta property="og:url" content="http://yoursite.com/2019/09/05/微服务CI-CD/index.html">
 <meta property="og:site_name" content="乘风破浪">
-<meta property="og:description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
+<meta property="og:description" content="什么是 CI/CD？CI/CD 是一种通过在应用开发阶段引入自动化)来频繁向客户交付应用的方法。CI/CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI/CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。 具体而言，CI/CD 在整个应用生命周期内（从集成和测试阶段，到交付和部署）引入了持续自动化和持续监控。这些关联的事务通常被统称为“CI/C">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/3.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/4.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/7.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/5.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/6.png">
-<meta property="og:updated_time" content="2019-08-27T09:37:20.381Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/05/微服务CI-CD/微服务CI-CD.png">
+<meta property="og:updated_time" content="2019-09-05T12:01:44.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RCA:springboot启动后，访问mapped的路径无效">
-<meta name="twitter:description" content="背景知识最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了swagger-spring demo。 问题现象启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。 问题原">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
+<meta name="twitter:title" content="微服务CI&#x2F;CD">
+<meta name="twitter:description" content="什么是 CI/CD？CI/CD 是一种通过在应用开发阶段引入自动化)来频繁向客户交付应用的方法。CI/CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI/CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。 具体而言，CI/CD 在整个应用生命周期内（从集成和测试阶段，到交付和部署）引入了持续自动化和持续监控。这些关联的事务通常被统称为“CI/C">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/05/微服务CI-CD/微服务CI-CD.png">
 
 
 
@@ -127,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/05/微服务CI-CD/">
 
 
 
 
 
-  <title>RCA:springboot启动后，访问mapped的路径无效 | 乘风破浪</title>
+  <title>微服务CI/CD | 乘风破浪</title>
   
 
 
@@ -260,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/微服务CI-CD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="乘风破浪">
@@ -277,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RCA:springboot启动后，访问mapped的路径无效</h1>
+          <h1 class="post-title" itemprop="name headline">微服务CI/CD</h1>
         
 
         <div class="post-meta">
@@ -289,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T15:52:44+08:00">
-                2019-08-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T17:04:18+08:00">
+                2019-09-05
               </time>
             
 
@@ -312,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/RCA/" itemprop="url" rel="index">
-                    <span itemprop="name">RCA</span>
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
                   </a>
                 </span>
 
@@ -349,35 +344,31 @@
       
 
       
-        <h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>最近有一个需求，需要我负责的服务提供远程接口，并提供api文档。之前用过swagger，也觉得不错，打算通过它来做这个需求。于是在官网下载了<a href="blob:http://editor.swagger.io/ced858c5-818f-4321-8978-2458e151151a" target="_blank" rel="noopener">swagger-spring</a> demo。</p>
-<h1 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h1><p>启动swagger-spring服务成功后，访问localhost:8080，返回404，并且不是spring的error界面。检查容器的路径映射，访问被映射的路径/pet，也是返回同样的错误。</p>
-<h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>容器的上下文路径被改变，在application.properties 看到server.contextPath=/v2。默认是/，所以在平常我们直接访问被映射的路径即可访问成功。完整的访问路径应该是shema:host://context-path/mapping</p>
-<h1 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h1><p>首先可以确定tcp连接没有问题，因为返回了404。然后进入dispatchServlet的doDispatch打断点调试，发现并没有进入。则可判断已映射的路径无效是因为没有进入dispatchServlet。接着选择任意一个被加载的filter打断点，发现也没有进入。则可判断请求未进入spring容器，问题很可能发生在tomcat上。</p>
-<p>首先在NioEndpoint doRun方法上打断点，发现请求进入，接着找到请求执行的地方。</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/1.png">
+        <h1 id="什么是-CI-CD？"><a href="#什么是-CI-CD？" class="headerlink" title="什么是 CI/CD？"></a>什么是 CI/CD？</h1><p>CI/CD 是一种通过在应用开发阶段引入自动化)来频繁向客户交付应用的方法。CI/CD 的核心概念是持续集成、持续交付和持续部署。作为一个面向开发和运营团队的解决方案，CI/CD 主要针对在集成新代码时所引发的问题（亦称：“集成地狱”）。</p>
+<p>具体而言，CI/CD 在整个应用生命周期内（从集成和测试阶段，到交付和部署）引入了持续自动化和持续监控。这些关联的事务通常被统称为“CI/CD 管道”，由开发和运维团以敏捷方式协同支持。</p>
+<h2 id="CI-和-CD-之间（以及不同-CD-之间）有什么区别？"><a href="#CI-和-CD-之间（以及不同-CD-之间）有什么区别？" class="headerlink" title="CI 和 CD 之间（以及不同 CD 之间）有什么区别？"></a>CI 和 CD 之间（以及不同 CD 之间）有什么区别？</h2><p>缩略词 CI / CD 具有几个不同的含义。CI/CD 中的“CI”始终指持续集成，它属于开发人员的自动化流程。成功的 CI 意味着应用代码的新更改会定期构建、测试并合并到共享存储库中。该解决方案可以解决在一次开发中有太多应用分支，从而导致相互冲突的问题。</p>
+<p>CI/CD 中的“CD”指的是持续交付和/或持续部署，这些相关概念有时会交叉使用。两者都事关管道后续阶段的自动化，但它们有时也会单独使用，用于说明自动化程度。</p>
+<p>持续<em>交付</em>通常是指开发人员对应用的更改会自动进行错误测试并上传到存储库（如Github 或容器注册表），然后由运维团队将其部署到实时生产环境中。这旨在解决开发和运维团队之间可见性及沟通较差的问题。因此，持续交付的目的就是确保尽可能减少部署新代码时所需的工作量。</p>
+<p>持续<em>部署</em>（另一种“CD”）指的是自动将开发人员的更改从存储库发布到生产环境，以供客户使用。它主要为了解决因手动流程降低应用交付速度，从而使运维团队超负荷的问题。持续部署以持续交付的优势为根基，实现了管道后续阶段的自动化。</p>
+<p>CI/CD 既可能仅指持续集成和持续交付构成的关联环节，也可以指持续集成、持续交付和持续部署这三项构成的关联环节。更为复杂的是，有时“持续交付”也包含了持续部署流程。</p>
+<p>归根结底，纠缠于这些语义其实并无必要，您只需记得 CI/CD 实际上就是一个流程（通常形象地表述为管道），用于在更大程度上实现应用开发的持续自动化和持续监控。因案例而异，该术语的具体含义取决于 CI/CD 管道的自动化程度。许多企业最开始先添加 CI，然后逐步实现交付和部署的自动化（例如作为云原生的一部分）。</p>
+<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>现代应用的目标是让多位开发人员同时处理同一应用的不同功能。但是，如果企业安排在一天内将所有分支源代码合并在一起（称为”合并”），最终可能造成工作繁琐、耗时，而且需要手动完成。这是因为当一位独立工作的开发人员对应用进行更改时，有可能会与其他开发人员同时进行的更改发生冲突。</p>
+<p>持续集成（CI）可以帮助开发人员更加频繁地（有时甚至每天）将代码更改合并到共享分支或“主干”中。一旦开发人员对应用所做的更改被合并，系统就会通过自动构建应用并运行不同级别的自动化测试（通常是单元测试和集成测试）来验证这些更改，确保这些更改没有对应用造成破坏。这意味着测试内容涵盖了从类和函数到构成整个应用的不同模块。如果自动化测试发现新代码和现有代码之间存在冲突，CI 可以更加轻松地快速修复这些错误。</p>
+<h2 id="持续交付"><a href="#持续交付" class="headerlink" title="持续交付"></a>持续交付</h2><p>完成 CI 中构建及单元测试和集成测试的自动化流程后，持续交付可自动将已验证的代码发布到存储库。为了实现高效的持续交付流程，务必要确保 CI 已内置于开发管道。持续交付的目标是拥有一个可随时部署到生产环境的代码库。</p>
+<p>在持续交付中，每个阶段（从代码更改的合并，到生产就绪型构建版本的交付）都涉及测试自动化和代码发布自动化。在流程结束时，运维团队可以快速、轻松地将应用部署到生产环境中。</p>
+<h2 id="持续部署"><a href="#持续部署" class="headerlink" title="持续部署"></a>持续部署</h2><p>对于一个成熟的 CI/CD 管道来说，最后的阶段是持续部署。作为持续交付——自动将生产就绪型构建版本发布到代码存储库——的延伸，持续部署可以自动将应用发布到生产环境。由于在生产之前的管道阶段没有手动门控，因此持续部署在很大程度上都得依赖精心设计的测试自动化。</p>
+<p>实际上，持续部署意味着开发人员对应用的更改在编写后的几分钟内就能生效（假设它通过了自动化测试）。这更加便于持续接收和整合用户反馈。总而言之，所有这些 CI/CD 的关联步骤都有助于降低应用的部署风险，因此更便于以小件的方式（而非一次性）发布对应用的更改。不过，由于还需要编写自动化测试以适应 CI/CD 管道中的各种测试和发布阶段，因此前期投资还是会很大。</p>
+<p>上述摘自于<a href="http://www.redhat.com" target="_blank" rel="noopener">www.redhat.com</a></p>
+<h1 id="方案设计"><a href="#方案设计" class="headerlink" title="方案设计"></a>方案设计</h1><img src="/2019/09/05/微服务CI-CD/微服务CI-CD.png">
 
-<p>紧接着在往下调试AbstractProtocol</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/2.png">
-
-<p>AbstractProcessorLight</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/3.png">
-
-<p>Http11Processor</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/4.png">
-
-<p>CoyoteAdpter 这里发现postParseSuccess为false，请求没有交给容器，与我们之前的猜想一致。进入postParseRequest方法查看</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/7.png">
-
-<p>CoyoteAdapter 关键点可能在这里，有个mapper</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/5.png">
-
-<p>调试并查看mapper的值，只看到个/v2，于是在访问路径上加上v2，访问localhost:8080/v2，果然成功了。</p>
-<img src="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/6.png">
-
-<p>最后查看application.properties发现比平常项目多了个server.contextPath=/v2，至此，一切都一目了然了。</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>访问路径加上/v2</p>
-<h1 id="经验教训"><a href="#经验教训" class="headerlink" title="经验教训"></a>经验教训</h1><p>遇到成熟的开源框架，发生错误时，应该先看配置。可能比调试通一个项目更快找到原因</p>
-<h1 id="RCA类型"><a href="#RCA类型" class="headerlink" title="RCA类型"></a>RCA类型</h1><p>springboot容器部分不熟悉</p>
+<ol>
+<li>本地编写代码上传代码仓库</li>
+<li>CI触发器（如轮询SCM，webhook等）触发jenkins开始构建</li>
+<li>jenkins构建、打包、自动化测试、制作镜像、上传镜像到镜像仓库</li>
+<li>CD触发器（如远程执行，人工触发等）通知测试环境容器集群部署</li>
+<li>人工触发回滚/预发布环境容器部署</li>
+<li>人工触发回滚/生产环境部署</li>
+</ol>
 
       
     </div>
@@ -393,6 +384,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/微服务-CI-CD/" rel="tag"># 微服务 CI CD</a>
+          
+        </div>
+      
 
       
       
@@ -402,15 +399,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/27/RCA-springboot启动后，访问mapped的路径无效-1/" rel="next" title="RCA:springboot启动后，访问mapped的路径无效">
+                <i class="fa fa-chevron-left"></i> RCA:springboot启动后，访问mapped的路径无效
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/05/微服务CI-CD/" rel="prev" title="微服务CI/CD">
-                微服务CI/CD <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -542,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景知识"><span class="nav-number">1.</span> <span class="nav-text">背景知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题现象"><span class="nav-number">2.</span> <span class="nav-text">问题现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题原因"><span class="nav-number">3.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排查过程"><span class="nav-number">4.</span> <span class="nav-text">排查过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">5.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经验教训"><span class="nav-number">6.</span> <span class="nav-text">经验教训</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RCA类型"><span class="nav-number">7.</span> <span class="nav-text">RCA类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-CI-CD？"><span class="nav-number">1.</span> <span class="nav-text">什么是 CI/CD？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CI-和-CD-之间（以及不同-CD-之间）有什么区别？"><span class="nav-number">1.1.</span> <span class="nav-text">CI 和 CD 之间（以及不同 CD 之间）有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#持续集成"><span class="nav-number">1.2.</span> <span class="nav-text">持续集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#持续交付"><span class="nav-number">1.3.</span> <span class="nav-text">持续交付</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#持续部署"><span class="nav-number">1.4.</span> <span class="nav-text">持续部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方案设计"><span class="nav-number">2.</span> <span class="nav-text">方案设计</span></a></li></ol></div>
             
 
           </div>
